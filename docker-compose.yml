@@ -1,0 +1,28 @@
+dummy-blog:
+  build: ./dummy-blog
+  command: rails server -p 3000 -b '0.0.0.0'
+  volumes:
+    - ./dummy-blog:/home/app
+  ports:
+    - "3000:3000"
+  links:
+    - postgres
+  environment:
+    DATABASE_HOST: postgres
+    DATABASE_USERNAME: dummy-blog
+    DATABASE_PASSWORD: dummy-pwd
+    DATABASE_NAME: dummy-blog
+postgres:
+  image: postgres:9.4
+  ports:
+    - "5432"
+  environment:
+    POSTGRES_USER: dummy-blog
+    POSTGRES_PASSWORD: dummy-pwd
+words-generator:
+  build: ./words-generator
+  command: rackup config.ru -p 9292 --host 0.0.0.0
+  ports:
+    - "9292:9292"
+  volumes:
+    - ./words-generator:/home/app
