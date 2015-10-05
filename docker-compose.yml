@@ -7,18 +7,14 @@ dummy-blog:
     - "3000:3000"
   links:
     - postgres
-  environment:
-    DATABASE_HOST: postgres
-    DATABASE_USERNAME: dummy-blog
-    DATABASE_PASSWORD: dummy-pwd
-    DATABASE_NAME: dummy-blog
+  env_file:
+    - ./dummy-blog/.env
 postgres:
   image: postgres:9.4
   ports:
     - "5432"
-  environment:
-    POSTGRES_USER: dummy-blog
-    POSTGRES_PASSWORD: dummy-pwd
+  env_file:
+    - .env.postgres
 words-generator:
   build: ./words-generator
   command: rackup config.ru -p 9292 --host 0.0.0.0
