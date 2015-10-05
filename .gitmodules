@@ -1,6 +1,6 @@
 [submodule "dummy-blog-root"]
 	path = dummy-blog-root
-	url = /Users/djump/Code/foobar/dummy-blog-root
+	url = git@github.com:djeusette/dummy-blog-root.git
 [submodule "dummy-blog"]
 	path = dummy-blog
 	url = git@github.com:djeusette/dummy-blog.git
