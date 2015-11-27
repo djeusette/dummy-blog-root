@@ -17,8 +17,8 @@ WORDS_GENERATOR_URL=...
 ##### .env.postgres
 
 ```
-POSTGRES_USER=dummy-blog
-POSTGRES_PASSWORD=dummy-pwd
+POSTGRES_USER=xxx
+POSTGRES_PASSWORD=xxx
 ```
 
 #### Run
