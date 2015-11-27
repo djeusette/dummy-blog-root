@@ -11,7 +11,7 @@ DATABASE_HOST=postgres
 DATABASE_NAME=dummy-blog
 DATABASE_USERNAME=xxx
 DATABASE_PASSWORD=xxx
-WORDS_GENERATOR_URL=...
+WORDS_GENERATOR_URL=http://xxx:9292/api
 ```
 
 ##### .env.postgres
